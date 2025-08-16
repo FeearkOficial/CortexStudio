@@ -319,6 +319,5 @@ function Adota() {
   );
 }
 
-SUHSUS
 
 export default Adota; // Exporta o componente localização para ser usado em App.jsxnom
