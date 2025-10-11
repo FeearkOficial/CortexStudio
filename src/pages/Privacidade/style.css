@@ -1,0 +1,209 @@
+.privacy-layout-container {
+  background-color: #101014;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  border: 1px solid var(--border-color);
+}
+
+.privacy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.privacy-title-block h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.privacy-security-message {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--muted-text-color, #a1a1aa);
+}
+
+.privacy-security-message .icon {
+  color: var(--primary-color);
+  width: 24px;
+  height: 24px;
+}
+
+.privacy-qa-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.privacy-qa-pair {
+  display: flex;
+  align-items: stretch;
+  background-color: #16161A;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.privacy-qa-question {
+  background-color: var(--border-color);
+  color: var(--text-color);
+  padding: 1.5rem;
+  font-weight: 600;
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+
+.privacy-qa-answer {
+  color: var(--muted-text-color, #a1a1aa);
+  padding: 1.5rem;
+  width: 65%;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.privacy-bubbles-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.privacy-info-bubble {
+  background-color: #16161A;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  color: var(--muted-text-color, #a1a1aa);
+  transition: transform 0.3s ease;
+}
+
+.privacy-info-bubble:hover {
+  transform: translateY(-4px);
+}
+
+.privacy-info-bubble-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.privacy-info-bubble-header .icon {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-color);
+}
+
+.privacy-info-bubble-header h4 {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.privacy-info-bubble p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.h2color {
+  color: rgb(255, 255, 255);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* ===================================== */
+/* 📱 RESPONSIVIDADE */
+/* ===================================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .privacy-layout-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .privacy-title-block h1 {
+    font-size: 1.6rem;
+  }
+
+  .privacy-qa-pair {
+    flex-direction: column;
+  }
+
+  .privacy-qa-question,
+  .privacy-qa-answer {
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .privacy-qa-question {
+    border-bottom: 1px solid var(--border-color);
+    background-color: #1c1c21;
+  }
+
+  .privacy-security-message {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .privacy-bubbles-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .h2color {
+    font-size: 1.3rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .privacy-layout-container {
+    padding: 1rem;
+  }
+
+  .privacy-title-block h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .privacy-security-message {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .privacy-security-message .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .privacy-qa-section {
+    gap: 1rem;
+  }
+
+  .privacy-info-bubble {
+    padding: 1rem;
+  }
+
+  .privacy-info-bubble-header h4 {
+    font-size: 0.95rem;
+  }
+
+  .privacy-info-bubble p {
+    font-size: 0.8rem;
+  }
+
+  .h2color {
+    font-size: 1.2rem;
+  }
+}

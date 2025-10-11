@@ -1,0 +1,7 @@
+.services-section{
+    padding: 4rem 1 rem;
+}
+.services-section:nth-child(even){
+    background-color: #0d0d0d;
+}
+

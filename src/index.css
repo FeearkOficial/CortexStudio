@@ -1,0 +1,114 @@
+/* === FONTES === */
+
+/* Importa a fonte Nunito do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Define a fonte personalizada SoDo Sans (carregada localmente) */
+@font-face {
+  font-family: 'SoDo Sans';
+  src: url('./assets/fonts/SoDoSans-Bold.woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SoDo Sans';
+  src: url('./assets/fonts/SoDoSans-Regular.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SoDo Sans';
+  src: url('./assets/fonts/SoDoSans-SemiBold.woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* === VARIÁVEIS DE TEMA (CORES) === */
+:root {
+  --background-color: #000000; 
+  --background-color2: #0c0b0b; 
+  --border-color: #2b2b2b;
+  --primary-color: #b857fd; 
+  --primary-color-rgb: 184, 87, 253;
+  --text-color: #ffffff;
+  --muted-text-color: #a1a1aa;
+  --accent-color: #55aaff;
+  --neon-blue-color: #00c3ff;
+
+  --header-height: 80px; 
+}
+
+/* === RESET E ESTILOS GERAIS DO BODY === */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'SoDo Sans', 'Nunito', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--background-color2);
+  color: var(--text-color); /* Cor de texto padrão */
+  padding-top: var(--header-height);
+}
+
+main {
+  /* Garante que o conteúdo principal ocupe o espaço disponível (efeito "sticky footer") */
+  flex-grow: 1;
+  animation: fadeInUp 0.7s ease-out forwards; /* Animação completa no site  */
+}
+
+/* === CLASSES DE LAYOUT GLOBAIS === */
+
+/* Container principal para centralizar o conteúdo */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Título de seção para usar dentro do Service Grid */
+.grid-section-title {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.grid-section-title:first-of-type {
+  margin-top: 2rem;
+}
+.gradient-text {
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* === ANIMAÇÃO DE ENTRADA DE PÁGINA === */
+
+@keyframes fadeInUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
