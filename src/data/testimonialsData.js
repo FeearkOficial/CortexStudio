@@ -59,5 +59,10 @@ export const testimonialsData = [
     author: "Mariana Souza",
     rating: 5,
   },
+    {
+    quote: "Atedendeu todas minhas necessidades, trabalho de qualidade. Equipe nota mil!!!!",
+    author: "Andressa Cristina",
+    rating: 5,
+  },
 
 ];
